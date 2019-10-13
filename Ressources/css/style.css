@@ -2,6 +2,12 @@
 
     body, input, button{
         font-family: 'Roboto', sans-serif;
+        
+    }
+
+    body{
+        background: #dbf5ff;
+        padding: 80px 0px 0px 0px;
     }
 
     header{
@@ -29,6 +35,7 @@
         border-bottom-left-radius: 5px;
         border-top-right-radius: 25px;
         border-bottom-right-radius: 25px;
+        padding: 0px 60px 0px 0px;
 
         font-weight: 400;
         text-indent: 15px;
@@ -72,6 +79,8 @@
         box-shadow: none;
         outline: none;
 
+        cursor: pointer;
+
         -webkit-appearance: none;
         -moz-appearance: none;
         -ms-appearance: none;
@@ -79,3 +88,31 @@
         appearance: none;
 
     }
+
+    header button svg{
+        width: 16px;
+        height: 16px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin: -8px 0px 0px -8px;
+    }
+
+    header button svg .fill{
+        background: #00b7ff;
+    }
+
+    ul.todo{
+
+    }
+
+    footer{
+        bottom: 0;
+        left: 0;
+        position: fixed;
+    }
+
+
+
+    
+
