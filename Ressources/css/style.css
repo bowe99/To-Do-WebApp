@@ -186,6 +186,14 @@
         border-radius: 12px;
         border: 1.5px solid #00b7ff;
         
+        transition:background 0.2s ease;
+    }
+
+    ul.todo#completed li .buttons button.complete svg{
+        border-radius: 12px;
+        border: 1.5px solid #00b7ff;
+        background: #00b7ff;
+        
     }
 
     ul.todo li .buttons button.complete svg .fill{
@@ -196,15 +204,19 @@
         fill: #fff;
     }
 
+    ul.todo:not(#completed) li .buttons button.complete:hover svg{
+        background:rgba(0, 182, 255, 0.75);
+    }
+
+    ul.todo:not(#completed) li .buttons button.complete:hover svg .fill{
+        fill: #fff;
+    }
+
     ul.todo li .buttons button.complete svg .noFill{
         fill: none;
     }
 
-    ul.todo#completed li .buttons button.complete svg .noFill{
-        fill: #00b7ff;
-    }
-
-    .remove .removeText{
+    /* .remove .removeText{
         visibility: hidden;
         width: 80px;
         background-color: #444;
@@ -222,7 +234,7 @@
 
     .remove:hover .removeText{
         visibility: visible;
-    }
+    } */
     
 
     footer{
