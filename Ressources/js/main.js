@@ -12,7 +12,17 @@ document.getElementById('add').addEventListener('click', function(){
         addItemTodo(value);
         document.getElementById('item').value = '';
     }
+});
+
+var input = document.getElementById('item');
+input.addEventListener('keyup', function(e){
+    var value = document.getElementById('item').value;
+
+    if(e.keyCode === 13){
+        document.getElementById('add').click();
+    }
 })
+
 
 function removeItem(){
     console.log(this.parentNode);
@@ -24,10 +34,15 @@ function removeItem(){
 }
 
 function completeItem(){
-    var list = document.getElementById('completed');
+   
     var item = this.parentNode.parentNode;
+    var parent = item.parentNode;
 
-    list.insertBefore(item, list.childNodes[0]);
+    var id = parent.id;
+
+    var target = (id === 'todo') ? document.getElementById('completed') : document.getElementById('todo');
+
+    target.insertBefore(item, target.childNodes[0]);
 }
 
 
